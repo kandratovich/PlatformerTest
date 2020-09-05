@@ -35,11 +35,11 @@ public class Saw : MonoBehaviour
         if (isGrounded)
         {
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position+transform.up*0.5f+transform.right*direction.x*0.7f,0.1f);
-            if (colliders.Length > 0 && colliders.All(x => !x.GetComponent<Character>())) direction *= -1.0f;
+            if (colliders.Length > 0 && colliders.All(x => x.GetComponent<Block>())) direction *= -1.0f;
             transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, speed * Time.deltaTime);
         }
         else
-        transform.Translate(Vector3.down * speed * Time.deltaTime);
+            transform.Translate(Vector3.down * speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
