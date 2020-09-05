@@ -21,7 +21,7 @@ public class SpawnSaw : MonoBehaviour
             float x = target.position.x;
             Instantiate(
                 saw,
-                new Vector3(Random.Range(x-8, x+8), 6, 89),
+                new Vector3(Random.Range(x-8, x+8), 8, 89),
                 Quaternion.Euler(0, 0 , 0)
             );
             yield return new WaitForSeconds(2.0f);
