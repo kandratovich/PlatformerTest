@@ -34,6 +34,11 @@ public class Character : Unit
         charAnimator = GetComponentInChildren<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
+    private void Start()
+    {
+        lives = CharacterHeals.lives;
+        livesBar.Refresh();
+    }
     private void FixedUpdate()
     {
         CheckGround();

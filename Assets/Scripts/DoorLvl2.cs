@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Door : MonoBehaviour
+public class DoorLvl2 : MonoBehaviour
 {
     public GameObject GameOverWin;
     private void OnTriggerEnter2D(Collider2D collider)
@@ -11,9 +11,9 @@ public class Door : MonoBehaviour
         Character character = collider.GetComponent<Character>();
         if (character)
         {
-            CharacterHeals.lives = character.lives;
             GameOverWin.SetActive(true);
-            SceneManager.LoadScene("Level_2");
+            Time.timeScale = 0f;
         }
+
     }
 }
