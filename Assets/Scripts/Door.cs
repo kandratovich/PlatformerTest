@@ -11,9 +11,9 @@ public class Door : MonoBehaviour
         Character character = collider.GetComponent<Character>();
         if (character)
         {
-            CharacterHeals.lives = character.lives;
+            CharacterStats.lives = character.lives;
             GameOverWin.SetActive(true);
-            SceneManager.LoadScene("Level_2");
+            Time.timeScale = 0f;
         }
     }
 }

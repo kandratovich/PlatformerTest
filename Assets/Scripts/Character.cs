@@ -36,7 +36,7 @@ public class Character : Unit
     }
     private void Start()
     {
-        lives = CharacterHeals.lives;
+        lives = CharacterStats.lives;
         livesBar.Refresh();
     }
     private void FixedUpdate()

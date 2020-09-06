@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterHeals : MonoBehaviour
+public class CharacterStats : MonoBehaviour
 {
     public static int lives = 3;
 
